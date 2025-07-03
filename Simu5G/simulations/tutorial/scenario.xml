@@ -1,0 +1,15 @@
+<scenario>
+  <!-- Activate UE[10..14] at 50s -->
+  <at t="50s">
+    <set-module-parameter module="ue[10..14].mobility" parameter="initialX" value="uniform(100m,900m)"/>
+    <set-module-parameter module="ue[10..14].mobility" parameter="initialY" value="uniform(100m,900m)"/>
+    <set-module-parameter module="ue[10..14].app[*]" parameter="startTime" value="50s"/>
+  </at>
+
+  <!-- Activate UE[15..19] at 100s -->
+  <at t="100s">
+    <set-module-parameter module="ue[15..19].mobility" parameter="initialX" value="uniform(100m,900m)"/>
+    <set-module-parameter module="ue[15..19].mobility" parameter="initialY" value="uniform(100m,900m)"/>
+    <set-module-parameter module="ue[15..19].app[*]" parameter="startTime" value="100s"/>
+  </at>
+</scenario>
